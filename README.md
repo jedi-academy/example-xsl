@@ -1,2 +1,2 @@
 # example-xsl
-XSL examples
+Sample XSLT usage
