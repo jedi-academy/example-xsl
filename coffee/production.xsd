@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!--
+    Schema to constrain the coffee produciton trends
+-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- 
+    ******************************************
+    Let's define our types
+    ****************************************** 
+    -->
+
+    <!-- Lookup code.
+    Market and bean codes are defined in the original XML.
+    Each of these is a collection of code/name combinations.
+    Code uniqueness is specified as part of the collection
+    definition, later.
+    Each code consists of one or two upper case letters.
+    -->
+    <xs:simpleType name="Tcode">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Z]?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- A year is a 4-digit integer, except ours have to be >= 2007. -->
+    <xs:simpleType name="Tyear">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d{4}"/>
+            <xs:minInclusive value="2007"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- A definition associates a code with a value.  -->
+    <xs:complexType name="Tdefinition">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="code" type="Tcode"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- A yes/no restriction.  -->
+    <xs:simpleType name="Tyesno">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Y"/>
+            <xs:enumeration value="N"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <!-- 
+    ******************************************
+    Let's define our structure
+    ****************************************** 
+    -->
+
+    <!-- production
+    The root element is *production*.
+    It defines region codes, then contains
+    data for each region.
+    -->
+    <xs:element name="production">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="codes"/>        
+                <xs:element ref="region" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="source" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Region codes.
+    The *regions* element contains entries for each region coffee is grown in.
+    -->
+    <xs:element name="codes">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="area" type="Tdefinition" maxOccurs="unbounded"/>        
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="regioncodes">
+            <xs:selector xpath="area"/>
+            <xs:field xpath="@code"/>
+        </xs:unique>
+    </xs:element>
+
+    <!-- A *region* element contains the countries in that region -->
+    <xs:element name="region">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="country" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="code" type="Tcode" use="optional"/>
+        </xs:complexType>
+        <!-- we can't bind the code to the definitions, but we can insist 
+        they be unique, i.e. only region element per area. -->
+        <xs:unique name="regioncodesused">
+            <xs:selector xpath="."/>
+            <xs:field xpath="@code"/>
+        </xs:unique>
+    </xs:element>
+
+    <!-- Each *country* element provides the country name, and then annual production values. -->
+    <xs:element name="country">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />        
+                <xs:element ref="value" maxOccurs="unbounded" />        
+            </xs:sequence>
+             <xs:attribute name="member" type="Tyesno" default="Y"/>
+       </xs:complexType>
+    </xs:element>
+
+    <!-- Each *value* element provides the annual production for a country.  -->
+    <xs:element name="value">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:integer">
+                    <xs:attribute name="year" type="Tyear"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    
+</xs:schema>

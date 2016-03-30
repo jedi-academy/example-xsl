@@ -1,0 +1,42 @@
+<!--
+    DTD to validate coffee pricing data.
+-->
+
+<!-- "pricing" is the root element. It holds definitions for market codes, bean codes, and then historical data -->
+<!ELEMENT pricing (markets,beans,averages+)>
+<!-- "pricing" has a single attribute, an HREF for the source of the data -->
+<!ATTLIST pricing
+    source CDATA    #REQUIRED
+>
+
+<!-- Market codes are defined in a nested group of "market" elements -->
+<!ELEMENT markets (market)+>
+<!ELEMENT market (#PCDATA)>
+<!-- Each "market" has a single attribute, meant to be a unique code for that market. -->
+<!ATTLIST market
+    code    (NY|DE|FR)  #REQUIRED
+>
+
+<!-- Bean codes are defined in a nested group of "bean" elements -->
+<!ELEMENT beans (bean)+>
+<!ELEMENT bean (#PCDATA)>
+<!-- Each "bean" has a single attribute, meant to be a unique code for that kind of bean. -->
+<!ATTLIST bean
+    code   (CA|OA|BA|R)    #REQUIRED
+>
+
+<!-- Historical data is provided as average commodity market prices for a given year. -->
+<!ELEMENT averages (entry)*>
+<!-- Each group has an attribute specifying the year applicable to that group. -->
+<!ATTLIST   averages
+    year    CDATA   #REQUIRED
+>
+
+<!-- A specific historical data value is contained in an "entry" -->
+<!ELEMENT entry (#PCDATA)>
+<!-- ... with the relevant market and bean type as attributes -->
+<!ATTLIST entry
+    market      (NY|DE|FR)      #REQUIRED
+    bean        (CA|OA|BA|R)    #REQUIRED
+>
+

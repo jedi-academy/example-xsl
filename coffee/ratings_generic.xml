@@ -1,0 +1,9 @@
+    <bean uid="" name="">
+        <origin area="" region=""></origin>
+        <review rating="">
+            <source url=""></source>
+            <brand roast=""></brand>
+            <description></description>
+        </review>
+    </bean>
+    </bean>

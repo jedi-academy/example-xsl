@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='production.xsl'?>
+<!--
+production.xml
+
+This XML document is a record of historical coffee bean production, in 000s of 60kg bags.
+Original data came from the International Coffee Organization
+HREF: www.ico.org/prices/p2.htm
+-->
+
+<production source="www.ico.org"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="production.xsd">
+    
+    <codes>
+        <area code="SA">South America</area>
+        <area code="CA">Central America</area>
+        <area code="A">Africa</area>
+        <area code="P">Pacific</area>
+    </codes>
+    
+    <region code="A">
+        <country>
+            <name>Angola</name>
+            <value year="2007">36</value>
+            <value year="2008">38</value>
+            <value year="2009">13</value>
+            <value year="2010">35</value>
+            <value year="2011">29</value>
+            <value year="2012">33</value>
+        </country>
+        <country>
+            <name>Burundi</name>
+            <value year="2007">133</value>
+            <value year="2008">412</value>
+            <value year="2009">112</value>
+            <value year="2010">353</value>
+            <value year="2011">204</value>
+            <value year="2012">406</value>
+        </country>
+        <country>
+            <name>Cameroon</name>
+            <value year="2007">795</value>
+            <value year="2008">725</value>
+            <value year="2009">902</value>
+            <value year="2010">503</value>
+            <value year="2011">574</value>
+            <value year="2012">635</value>
+        </country>
+        <country>
+            <name>Central African Republic</name>
+            <value year="2007">43</value>
+            <value year="2008">60</value>
+            <value year="2009">93</value>
+            <value year="2010">95</value>
+            <value year="2011">86</value>
+            <value year="2012">100</value>
+        </country>
+        <country member="N">
+            <name>Congo, Demo Rep of</name>
+            <value year="2007">416</value>
+            <value year="2008">422</value>
+            <value year="2009">346</value>
+            <value year="2010">305</value>
+            <value year="2011">357</value>
+            <value year="2012">450</value>
+        </country>
+        <country>
+            <name>Cote d'Ivoire</name>
+            <value year="2007">2317</value>
+            <value year="2008">2397</value>
+            <value year="2009">1795</value>
+            <value year="2010">982</value>
+            <value year="2011">1886</value>
+            <value year="2012">2000</value>
+        </country>
+        <country>
+            <name>Ethiopia</name>
+            <value year="2007">5967</value>
+            <value year="2008">4949</value>
+            <value year="2009">6931</value>
+            <value year="2010">7500</value>
+            <value year="2011">6798</value>
+            <value year="2012">8100</value>
+        </country>
+        <country>
+            <name>Gabon</name>
+            <value year="2007">0</value>
+            <value year="2008">1</value>
+            <value year="2009">1</value>
+            <value year="2010">1</value>
+            <value year="2011">0</value>
+            <value year="2012">1</value>
+        </country>
+        <country>
+            <name>Ghana</name>
+            <value year="2007">31</value>
+            <value year="2008">27</value>
+            <value year="2009">33</value>
+            <value year="2010">112</value>
+            <value year="2011">146</value>
+            <value year="2012">85</value>
+        </country>
+        <country member="N">
+            <name>Guinea</name>
+            <value year="2007">323</value>
+            <value year="2008">505</value>
+            <value year="2009">499</value>
+            <value year="2010">386</value>
+            <value year="2011">351</value>
+            <value year="2012">415</value>
+        </country>
+        <country>
+            <name>Kenya</name>
+            <value year="2007">652</value>
+            <value year="2008">541</value>
+            <value year="2009">630</value>
+            <value year="2010">658</value>
+            <value year="2011">680</value>
+            <value year="2012">767</value>
+        </country>
+        <country>
+            <name>Liberia</name>
+            <value year="2007">7</value>
+            <value year="2008">12</value>
+            <value year="2009">13</value>
+            <value year="2010">10</value>
+            <value year="2011">11</value>
+            <value year="2012">10</value>
+        </country>
+        <country member="N">
+            <name>Madagascar</name>
+            <value year="2007">614</value>
+            <value year="2008">728</value>
+            <value year="2009">457</value>
+            <value year="2010">530</value>
+            <value year="2011">604</value>
+            <value year="2012">530</value>
+        </country>
+        <country>
+            <name>Malawi</name>
+            <value year="2007">19</value>
+            <value year="2008">21</value>
+            <value year="2009">17</value>
+            <value year="2010">17</value>
+            <value year="2011">27</value>
+            <value year="2012">20</value>
+        </country>
+        <country>
+            <name>Rwanda</name>
+            <value year="2007">224</value>
+            <value year="2008">369</value>
+            <value year="2009">259</value>
+            <value year="2010">323</value>
+            <value year="2011">247</value>
+            <value year="2012">209</value>
+        </country>
+        <country>
+            <name>Sierra Leone</name>
+            <value year="2007">40</value>
+            <value year="2008">86</value>
+            <value year="2009">91</value>
+            <value year="2010">33</value>
+            <value year="2011">76</value>
+            <value year="2012">50</value>
+        </country>
+        <country>
+            <name>Tanzania</name>
+            <value year="2007">810</value>
+            <value year="2008">1186</value>
+            <value year="2009">675</value>
+            <value year="2010">846</value>
+            <value year="2011">534</value>
+            <value year="2012">1017</value>
+        </country>
+        <country>
+            <name>Togo</name>
+            <value year="2007">125</value>
+            <value year="2008">138</value>
+            <value year="2009">202</value>
+            <value year="2010">160</value>
+            <value year="2011">162</value>
+            <value year="2012">150</value>
+        </country>
+        <country>
+            <name>Uganda</name>
+            <value year="2007">3449</value>
+            <value year="2008">3290</value>
+            <value year="2009">2845</value>
+            <value year="2010">3203</value>
+            <value year="2011">2817</value>
+            <value year="2012">3200</value>
+        </country>
+        <country>
+            <name>Yemen</name>
+            <value year="2007">198</value>
+            <value year="2008">220</value>
+            <value year="2009">135</value>
+            <value year="2010">161</value>
+            <value year="2011">166</value>
+            <value year="2012">200</value>
+        </country>
+        <country>
+            <name>Zambia</name>
+            <value year="2007">61</value>
+            <value year="2008">35</value>
+            <value year="2009">28</value>
+            <value year="2010">13</value>
+            <value year="2011">10</value>
+            <value year="2012">10</value>
+        </country>
+        <country>
+            <name>Zimbabwe</name>
+            <value year="2007">31</value>
+            <value year="2008">24</value>
+            <value year="2009">21</value>
+            <value year="2010">10</value>
+            <value year="2011">9</value>
+            <value year="2012">9</value>
+        </country>
+    </region>
+
+
+    <region code="CA">
+        <country>
+            <name>Costa Rica</name>
+            <value year="2007">1771</value>
+            <value year="2008">1287</value>
+            <value year="2009">1304</value>
+            <value year="2010">1392</value>
+            <value year="2011">1462</value>
+            <value year="2012">1671</value>
+        </country>
+        <country>
+            <name>Cuba</name>
+            <value year="2007">7</value>
+            <value year="2008">12</value>
+            <value year="2009">22</value>
+            <value year="2010">26</value>
+            <value year="2011">38</value>
+            <value year="2012">100</value>
+        </country>
+        <country member="N">
+            <name>Dominican Republic</name>
+            <value year="2007">465</value>
+            <value year="2008">645</value>
+            <value year="2009">352</value>
+            <value year="2010">378</value>
+            <value year="2011">682</value>
+            <value year="2012">550</value>
+        </country>
+        <country>
+            <name>El Salvador</name>
+            <value year="2007">1505</value>
+            <value year="2008">1410</value>
+            <value year="2009">1065</value>
+            <value year="2010">1814</value>
+            <value year="2011">1152</value>
+            <value year="2012">1242</value>
+        </country>
+        <country>
+            <name>Guatemala</name>
+            <value year="2007">4100</value>
+            <value year="2008">3785</value>
+            <value year="2009">3835</value>
+            <value year="2010">3950</value>
+            <value year="2011">3840</value>
+            <value year="2012">3143</value>
+        </country>
+        <country member="N">
+            <name>Haiti</name>
+            <value year="2007">359</value>
+            <value year="2008">359</value>
+            <value year="2009">351</value>
+            <value year="2010">350</value>
+            <value year="2011">349</value>
+            <value year="2012">325</value>
+        </country>
+        <country>
+            <name>Honduras</name>
+            <value year="2007">3640</value>
+            <value year="2008">3450</value>
+            <value year="2009">3603</value>
+            <value year="2010">4331</value>
+            <value year="2011">5903</value>
+            <value year="2012">4900</value>
+        </country>
+        <country>
+            <name>Mexico</name>
+            <value year="2007">4150</value>
+            <value year="2008">4651</value>
+            <value year="2009">4109</value>
+            <value year="2010">4003</value>
+            <value year="2011">4563</value>
+            <value year="2012">3900</value>
+        </country>
+        <country>
+            <name>Nicaragua</name>
+            <value year="2007">1906</value>
+            <value year="2008">1445</value>
+            <value year="2009">1871</value>
+            <value year="2010">1634</value>
+            <value year="2011">2210</value>
+            <value year="2012">1342</value>
+        </country>
+        <country>
+            <name>Panama</name>
+            <value year="2007">176</value>
+            <value year="2008">149</value>
+            <value year="2009">138</value>
+            <value year="2010">114</value>
+            <value year="2011">104</value>
+            <value year="2012">100</value>
+        </country>
+    </region>
+
+    <region code="SA">
+        <country>
+            <name>Bolivia</name>
+            <value year="2007">133</value>
+            <value year="2008">135</value>
+            <value year="2009">142</value>
+            <value year="2010">130</value>
+            <value year="2011">143</value>
+            <value year="2012">115</value>
+        </country>
+        <country>
+            <name>Brazil</name>
+            <value year="2007">36070</value>
+            <value year="2008">45992</value>
+            <value year="2009">39470</value>
+            <value year="2010">48095</value>
+            <value year="2011">43484</value>
+            <value year="2012">50826</value>
+        </country>
+        <country>
+            <name>Colombia</name>
+            <value year="2007">12516</value>
+            <value year="2008">8664</value>
+            <value year="2009">8098</value>
+            <value year="2010">8523</value>
+            <value year="2011">7654</value>
+            <value year="2012">9500</value>
+        </country>
+        <country>
+            <name>Ecuador</name>
+            <value year="2007">950</value>
+            <value year="2008">771</value>
+            <value year="2009">813</value>
+            <value year="2010">854</value>
+            <value year="2011">825</value>
+            <value year="2012">828</value>
+        </country>
+        <country member="N">
+            <name>Peru</name>
+            <value year="2007">3063</value>
+            <value year="2008">3872</value>
+            <value year="2009">3286</value>
+            <value year="2010">4069</value>
+            <value year="2011">5373</value>
+            <value year="2012">4133</value>
+        </country>
+        <country member="N">
+            <name>Venezuela</name>
+            <value year="2007">1520</value>
+            <value year="2008">932</value>
+            <value year="2009">1214</value>
+            <value year="2010">1202</value>
+            <value year="2011">902</value>
+            <value year="2012">1000</value>
+        </country>
+    </region>
+
+    <region code="P">
+        <country>
+            <name>India</name>
+            <value year="2007">4319</value>
+            <value year="2008">3950</value>
+            <value year="2009">4794</value>
+            <value year="2010">5033</value>
+            <value year="2011">5233</value>
+            <value year="2012">5258</value>
+        </country>
+        <country>
+            <name>Indonesia</name>
+            <value year="2007">4474</value>
+            <value year="2008">9612</value>
+            <value year="2009">11380</value>
+            <value year="2010">9129</value>
+            <value year="2011">7287</value>
+            <value year="2012">12730</value>
+        </country>
+        <country member="N">
+            <name>Laos</name>
+            <value year="2007">393</value>
+            <value year="2008">406</value>
+            <value year="2009">434</value>
+            <value year="2010">541</value>
+            <value year="2011">486</value>
+            <value year="2012">550</value>
+        </country>
+        <country>
+            <name>Papua New Guinea</name>
+            <value year="2007">968</value>
+            <value year="2008">1028</value>
+            <value year="2009">1038</value>
+            <value year="2010">870</value>
+            <value year="2011">1414</value>
+            <value year="2012">717</value>
+        </country>
+        <country>
+            <name>Philippines</name>
+            <value year="2007">446</value>
+            <value year="2008">587</value>
+            <value year="2009">730</value>
+            <value year="2010">189</value>
+            <value year="2011">180</value>
+            <value year="2012">455</value>
+        </country>
+        <country>
+            <name>Thailand</name>
+            <value year="2007">650</value>
+            <value year="2008">675</value>
+            <value year="2009">795</value>
+            <value year="2010">828</value>
+            <value year="2011">831</value>
+            <value year="2012">624</value>
+        </country>
+        <country>
+            <name>Timor-Leste</name>
+            <value year="2007">36</value>
+            <value year="2008">48</value>
+            <value year="2009">47</value>
+            <value year="2010">60</value>
+            <value year="2011">48</value>
+            <value year="2012">43</value>
+        </country>
+        <country>
+            <name>Vietnam</name>
+            <value year="2007">16405</value>
+            <value year="2008">18438</value>
+            <value year="2009">17825</value>
+            <value year="2010">19467</value>
+            <value year="2011">24058</value>
+            <value year="2012">22000</value>
+        </country>
+    </region>
+
+</production>

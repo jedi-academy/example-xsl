@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='pricing.xsl'?>
+<!--
+pricing.xml
+
+This XML document is a record of historical coffee bean pricing, US cents per pound.
+Original data came from the International Coffee Organization
+HREF: www.ico.org/prices/p2.htm
+-->
+<pricing source="www.ico.org"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="pricing.xsd">
+    
+    <markets>
+        <market code="NY">New York</market>
+        <market code="FR">France</market>
+        <market code="DE">Germany</market>
+    </markets>
+    
+    <beans>
+        <bean code="CA">Columbia Mild Arabica</bean>
+        <bean code="OA">Other Mild Arabica</bean>
+        <bean code="BA">Brazilian Mild Arabica</bean>
+        <bean code="R">Robustas</bean>
+    </beans>
+    
+    <averages year="1998">
+        <entry bean="CA" market="NY">142.83</entry>
+        <entry bean="CA" market="DE">145.58</entry>
+        <entry bean="OA" market="NY">132.25</entry>
+        <entry bean="OA" market="DE">144.09</entry>
+        <entry bean="BA" market="NY">121.81</entry>
+        <entry bean="BA" market="DE">130.80</entry>
+        <entry bean="R" market="NY">83.93</entry>
+        <entry bean="R" market="FR">80.81</entry>
+    </averages>
+    <averages year="1999">
+        <entry bean="CA" market="NY">116.45</entry>
+        <entry bean="CA" market="DE">114.17</entry>
+        <entry bean="OA" market="NY">101.54</entry>
+        <entry bean="OA" market="DE">110.87</entry>
+        <entry bean="BA" market="NY">88.84</entry>
+        <entry bean="BA" market="DE">94.17</entry>
+        <entry bean="R" market="NY">67.64</entry>
+        <entry bean="R" market="FR">67.23</entry>
+    </averages>
+    <averages year="2000">
+        <entry bean="CA" market="NY">102.60</entry>
+        <entry bean="CA" market="DE">99.80</entry>
+        <entry bean="OA" market="NY">85.09</entry>
+        <entry bean="OA" market="DE">92.89</entry>
+        <entry bean="BA" market="NY">79.86</entry>
+        <entry bean="BA" market="DE">83.67</entry>
+        <entry bean="R" market="NY">42.12</entry>
+        <entry bean="R" market="FR">40.26</entry>
+    </averages>
+    <averages year="2001">
+        <entry bean="CA" market="NY">72.22</entry>
+        <entry bean="CA" market="DE">68.24</entry>
+        <entry bean="OA" market="NY">61.94</entry>
+        <entry bean="OA" market="DE">63.14</entry>
+        <entry bean="BA" market="NY">50.52</entry>
+        <entry bean="BA" market="DE">52.42</entry>
+        <entry bean="R" market="NY">27.30</entry>
+        <entry bean="R" market="FR">27.49</entry>
+    </averages>
+    <averages year="2002">
+        <entry bean="CA" market="NY">65.26</entry>
+        <entry bean="CA" market="DE">64.78</entry>
+        <entry bean="OA" market="NY">60.43</entry>
+        <entry bean="OA" market="DE">62.31</entry>
+        <entry bean="BA" market="NY">45.09</entry>
+        <entry bean="BA" market="DE">45.92</entry>
+        <entry bean="R" market="NY">30.83</entry>
+        <entry bean="R" market="FR">29.76</entry>
+    </averages>
+    <averages year="2003">
+        <entry bean="CA" market="NY">67.31</entry>
+        <entry bean="CA" market="DE">64.34</entry>
+        <entry bean="OA" market="NY">64.08</entry>
+        <entry bean="OA" market="DE">64.30</entry>
+        <entry bean="BA" market="NY">50.82</entry>
+        <entry bean="BA" market="DE">50.16</entry>
+        <entry bean="R" market="NY">38.39</entry>
+        <entry bean="R" market="FR">36.50</entry>
+    </averages>
+    <averages year="2004">
+        <entry bean="CA" market="NY">84.15</entry>
+        <entry bean="CA" market="DE">79.49</entry>
+        <entry bean="OA" market="NY">80.15</entry>
+        <entry bean="OA" market="DE">80.64</entry>
+        <entry bean="BA" market="NY">68.18</entry>
+        <entry bean="BA" market="DE">69.11</entry>
+        <entry bean="R" market="NY">37.28</entry>
+        <entry bean="R" market="FR">35.65</entry>
+    </averages>
+    <averages year="2005">
+        <entry bean="CA" market="NY">117.02</entry>
+        <entry bean="CA" market="DE">114.67</entry>
+        <entry bean="OA" market="NY">114.30</entry>
+        <entry bean="OA" market="DE">115.22</entry>
+        <entry bean="BA" market="NY">101.36</entry>
+        <entry bean="BA" market="DE">102.49</entry>
+        <entry bean="R" market="NY">53.37</entry>
+        <entry bean="R" market="FR">49.87</entry>
+    </averages>
+    <averages year="2006">
+        <entry bean="CA" market="NY">118.36</entry>
+        <entry bean="CA" market="DE">115.70</entry>
+        <entry bean="OA" market="NY">113.95</entry>
+        <entry bean="OA" market="DE">114.80</entry>
+        <entry bean="BA" market="NY">102.89</entry>
+        <entry bean="BA" market="DE">104.19</entry>
+        <entry bean="R" market="NY">70.28</entry>
+        <entry bean="R" market="FR">66.98</entry>
+    </averages>
+    <averages year="2007">
+        <entry bean="CA" market="NY">126.74</entry>
+        <entry bean="CA" market="DE">124.70</entry>
+        <entry bean="OA" market="NY">123.20</entry>
+        <entry bean="OA" market="DE">123.81</entry>
+        <entry bean="BA" market="NY">110.72</entry>
+        <entry bean="BA" market="DE">112.06</entry>
+        <entry bean="R" market="NY">88.29</entry>
+        <entry bean="R" market="FR">86.29</entry>
+    </averages>
+    <averages year="2008">
+        <entry bean="CA" market="NY">145.85</entry>
+        <entry bean="CA" market="DE">143.12</entry>
+        <entry bean="OA" market="NY">138.32</entry>
+        <entry bean="OA" market="DE">140.86</entry>
+        <entry bean="BA" market="NY">122.51</entry>
+        <entry bean="BA" market="DE">127.86</entry>
+        <entry bean="R" market="NY">103.31</entry>
+        <entry bean="R" market="FR">105.03</entry>
+    </averages>
+    <averages year="2009">
+        <entry bean="CA" market="NY">180.87</entry>
+        <entry bean="CA" market="DE">174.58</entry>
+        <entry bean="OA" market="NY">141.65</entry>
+        <entry bean="OA" market="DE">141.48</entry>
+        <entry bean="BA" market="NY">111.39</entry>
+        <entry bean="BA" market="DE">116.55</entry>
+        <entry bean="R" market="NY">77.16</entry>
+        <entry bean="R" market="FR">74.02</entry>
+    </averages>
+    <averages year="2010">
+        <entry bean="CA" market="NY">223.76</entry>
+        <entry bean="CA" market="DE">226.22</entry>
+        <entry bean="OA" market="NY">194.40</entry>
+        <entry bean="OA" market="DE">196.63</entry>
+        <entry bean="BA" market="NY">145.71</entry>
+        <entry bean="BA" market="DE">155.93</entry>
+        <entry bean="R" market="NY">84.09</entry>
+        <entry bean="R" market="FR">77.63</entry>
+    </averages>
+    <averages year="2011">
+        <entry bean="CA" market="NY">283.82</entry>
+        <entry bean="CA" market="DE">283.67</entry>
+        <entry bean="OA" market="NY">273.20</entry>
+        <entry bean="OA" market="DE">269.55</entry>
+        <entry bean="BA" market="NY">243.67</entry>
+        <entry bean="BA" market="DE">248.72</entry>
+        <entry bean="R" market="NY">115.99</entry>
+        <entry bean="R" market="FR">107.91</entry>
+    </averages>
+    <averages year="2012">
+        <entry bean="CA" market="NY">203.88</entry>
+        <entry bean="CA" market="DE">200.47</entry>
+        <entry bean="OA" market="NY">187.52</entry>
+        <entry bean="OA" market="DE">185.70</entry>
+        <entry bean="BA" market="NY">171.30</entry>
+        <entry bean="BA" market="DE">176.07</entry>
+        <entry bean="R" market="NY">110.64</entry>
+        <entry bean="R" market="FR">101.36</entry>
+    </averages>
+</pricing>

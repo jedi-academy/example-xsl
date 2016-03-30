@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Coffee bean ratings. 
+No coding provided, as this will be handled by an XSL stylesheet in lab 11.
+-->
+<ratings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ratings.xsd">
+    <bean uid="PB1" name="Bali">
+        <origin area="P" region="Paradise Valley">Bali</origin>
+        <review rating="4.5">
+            <source>Coffee AM</source>
+            <brand roast="2">Bali 'Paradise Valley'</brand>
+            <description>In the high altitudes of the Bali, Volcanic Region of Indonesia, 'Paradise Valley' 
+                coffee beans are cultivated and wet-processed providing a smooth, heavy-bodied cup when brewed. 
+                This well-balanced and mild, Arabica coffee has low acidity and undertones of chocolate.</description>
+        </review>
+    </bean>
+    <bean uid="AB1" name="Burundi">
+        <origin area="A" region="">Burundi</origin>
+        <review rating="4">
+            <source>Coffee AM</source>
+            <brand roast="2">Burundi AA Kirimiro</brand>
+            <description>With a heavy mouthfeel, flavors of lemon, black tea, delicate hints of spiced clove, 
+                and a sweet nutty finish, this light-roasted coffee is something you've never tried before! 
+                We know you'll love it as soon as you take that very first sip.</description>
+        </review>
+    </bean>
+    <bean uid="PK1" name="Kopi Luwak">
+        <origin area="P" region="Luwaks">Sumatra</origin>
+        <review rating="3">
+            <source>Coffee AM</source>
+            <brand roast="3">Kopi Luwak</brand>
+            <description>This is the world's most unique gourmet coffee; it is definitely unlike any other coffee. 
+                There are different production methods of Kopi Luwak around the world, but each produces varying results. 
+                Our small batches of Kopi Luwak are medium roasted; when brewed it produces a specialty coffee that is 
+                full-bodied with hints of caramel and a light, crisp finish.</description>
+        </review>
+    </bean>
+    <bean uid="AK1" name="Kenya">
+        <origin area="A" region="">Kenya</origin>
+        <review rating="4.5">
+            <source>Coffee AM</source>
+            <brand roast="3">Kenya AA</brand>
+            <description>This medium-roasted, Kenyan coffee is denoted by the grade AA, meaning it is large 
+                in size as well as flavor. With a sharp acidity and a bold and heavy body, Kenya AA is 
+                layered with hints of fruit, giving it a complex sweetness and pungent aroma.</description>
+        </review>
+    </bean>
+    <bean uid="AE1" name="Ethiopia">
+        <origin area="A" region="">Ethiopia</origin>
+        <review rating="5">
+            <source>Java-geeks</source>
+            <brand roast="3">Starbucks Ethiopia</brand>
+            <description>Soft and velvety with notes of dark chocolate, peppery spice and sweet citrus.
+                Balanced, smooth and rich.</description>
+        </review>
+    </bean>
+</ratings>

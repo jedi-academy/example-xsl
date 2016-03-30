@@ -1,0 +1,30 @@
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!ELEMENT production (codes,region+)>
+
+<!ELEMENT codes (area)+>
+<!ELEMENT area (#PCDATA)>
+<!ATTLIST area
+    code    (SA|CA|A|P)    #REQUIRED
+>
+
+<!ELEMENT region (country)+>
+<!ATTLIST region
+    code    (SA|CA|A|P)    #REQUIRED
+>
+
+<!ELEMENT country (name,(value)*)>
+<!ATTLIST country
+    member  CDATA   "Y"
+>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+    year    CDATA   #REQUIRED
+>

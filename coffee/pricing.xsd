@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!--
+    Schema to constrain the coffee pricing trends
+-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- 
+    ******************************************
+    Let's define our types
+    ****************************************** 
+    -->
+
+    <!-- Lookup code.
+    Market and bean codes are defined in the original XML.
+    Each of these is a collection of code/name combinations.
+    Code uniqueness is specified as part of the collection
+    definition, later.
+    Each code consists of one or two upper case letters.
+    -->
+    <xs:simpleType name="Tcode">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][A-Z]?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Price per pound.
+    This is a positive price per pound of coffee,
+    with no more than two decimal places.
+    -->
+    <xs:simpleType name="Tprice">
+        <xs:restriction base="xs:decimal">    
+            <xs:minExclusive value="0.0"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>    
+    </xs:simpleType>
+
+    <!-- A year is a 4-digit integer, except ours have to be >= 1998. -->
+    <xs:simpleType name="Tyear">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d{4}"/>
+            <xs:minInclusive value="1998"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- A definition associates a code with a value.  -->
+    <xs:complexType name="Tdefinition">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="code" type="Tcode"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <!-- 
+    ******************************************
+    Let's define our structure
+    ****************************************** 
+    -->
+
+    <!-- pricing
+    The root element is *pricing*.
+    It defines market and bean codes, then contains
+    average coffee pricing, by year, since 1998.
+    Optionally specify the data source.
+    -->
+    <xs:element name="pricing">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="markets"/>        
+                <xs:element ref="beans" />        
+                <xs:element ref="averages" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="source" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Market codes.
+    The *markets* element contains entries for each coffee bean market,
+    worldwide. Each entry names a market with a unique code.
+    -->
+    <xs:element name="markets">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="market" type="Tdefinition" maxOccurs="unbounded"/>        
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="marketcodes">
+            <xs:selector xpath="market"/>
+            <xs:field xpath="@code"/>
+        </xs:unique>
+    </xs:element>
+
+    <!-- The *beans* element contains all of the bean definitions -->
+    <xs:element name="beans">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="bean" type="Tdefinition" maxOccurs="unbounded"/>        
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="beancodes">
+            <xs:selector xpath="bean"/>
+            <xs:field xpath="@code"/>
+        </xs:unique>
+    </xs:element>
+
+    <!-- Each *averages* element defines the pricing of different coffee beans in different markets in a year. -->
+    <xs:element name="averages">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="entry" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="year" type="Tyear"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Each *entry* element defines the pricing of a specific bean in a market  -->
+    <xs:element name="entry">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="Tprice">
+                    <xs:attribute name="market" type="Tcode"/>
+                    <xs:attribute name="bean" type="Tcode"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    
+</xs:schema>

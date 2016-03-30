@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!--
+    Schema to constrain coffee bean ratings
+-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- 
+    ******************************************
+    Let's define our types
+    ****************************************** 
+    -->
+
+    <!-- Unique ID.
+    Each bean being rated has a unique identifier.
+    Each denotes an area (and perhaps country), with a sequence number
+    within that area. The area codes are meant to conform
+    to the "area" type, but enforcing that would need
+    a separate key construct with its own namespace,
+    more than we are prepared to address right now.
+    -->
+    <xs:simpleType name="Tuid">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][a-zA-Z]?[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Growing area.
+    These are the generic areas, in the world, where coffee is grown.
+    Hmmm - no values. This should be better defined, with descriptions.
+    -->
+    <xs:simpleType name="Tarea">
+        <xs:restriction base="xs:string">    
+            <xs:enumeration value="CA"/>
+            <xs:enumeration value="SA"/>
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="P"/>
+        </xs:restriction>    
+    </xs:simpleType>
+    
+    <!-- Rating.
+    This is a rating scale, out of 5.
+    Myself, I use...
+        0   Would never drink
+        1   Would drink under protest, or if paid enough
+        2   Would drink, but not by choice
+        3   Would have again, "normal"
+        4   Would serve to company
+        5   Would write home about
+    -->
+    <xs:simpleType name="Trating">
+        <xs:restriction base="xs:decimal">    
+            <xs:minInclusive value="0.0"/>
+            <xs:maxInclusive value="5.0"/>
+            <xs:fractionDigits value="1"/>
+        </xs:restriction>    
+    </xs:simpleType>
+
+    <!-- Roast. 
+    This value reflects the degree of roasting for the beans.
+        1   light
+        2   medium-light
+        3   medium
+        4   medium-dark
+        5   dark
+    -->
+    <xs:simpleType name="Troast">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- 
+    ******************************************
+    Let's define our structure
+    ****************************************** 
+    -->
+
+    <!-- Now we can define the structure of our XML.
+    This could be done from the top-down, like a DTD,
+    or from the bottom-up, like programming. 
+    For this schema, let's work from the top down. -->
+
+    <!-- ratings
+    The root element is *ratings*, and it should hold multiple *bean*
+    elements, one per type of coffee bean being rated. 
+    -->
+    <xs:element name="ratings">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="bean" maxOccurs="unbounded"/>        
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Each *bean* element contains some bean description (*origin*), and then
+    a number of multiple *review* elements, from different sources.
+    -->
+    <xs:element name="bean">        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="origin"/>        
+                <xs:element ref="review" minOccurs="0" maxOccurs="unbounded"/>        
+            </xs:sequence>
+            <xs:attribute name="uid" type="Tuid"/>
+            <xs:attribute name="name" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Each *origin* element identifies the country that a bean comes from.
+    The area attribute identifies the growing area, world-wide, while
+    the region attribute identifies a specific growing region within the
+    country of origin.
+    I have chosen not to model the farm or collective that a bean comes from,
+    though that data is sometimes available.
+    -->
+    <xs:element name="origin">
+         <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="area" type="Tarea" use="required"/>
+                    <xs:attribute name="region" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Each *review* reflects an opinion on the desirability of the
+    bean being reviewed. Reviews are necessarily subjective.
+    -->
+    <xs:element name="review">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="source" />        
+                <xs:element ref="brand"/>        
+                <xs:element name="description" type="xs:string"/>        
+            </xs:sequence>
+            <xs:attribute name="rating" type="Trating"/>
+         </xs:complexType>
+    </xs:element>
+
+    <!-- Each *source* identifies a reviewer.
+    -->
+    <xs:element name="source">
+         <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="link" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!-- Each *brand* identifies a specific brand of coffee being reviewed.
+    There could be several for a given type of coffee bean.
+    -->
+    <xs:element name="brand">
+         <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="roast" type="Troast"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
