@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type='text/xsl' href='demo-exam.xsl'?>
+<exams>
+  <block code="ACIT2">
+    <exam course="ACIT2515" day="R" start="1030" end="1230" room="NE1-239/242" enrolled="37"/>
+    <exam course="ACIT2520" day="M" start="1530" end="1730" room="NE1-239/242" enrolled="37"/>
+    <exam course="ACIT2620" day="T" start="1030" end="1230" room="NE1-239/242" enrolled="37"/>
+    <exam course="ACIT2730" day="R" start="1530" end="1730" room="NE28-101" enrolled="37"/>
+    <exam course="BUSA2720" day="W" start="1030" end="1200" room="NE1-239/242" enrolled="37"/>
+    <exam course="COMM2216" day="T" start="1530" end="1730" room="SW5-1840" enrolled="35"/>
+    <exam course="MATH1350" day="M" start="1030" end="1230" room="NE28-101" enrolled="37"/>
+  </block>
+  <block code="ACIT4">
+    <exam course="ACIT4620" day="W" start="1030" end="1200" room="NE28-101" enrolled="35"/>
+    <exam course="ACIT4650" day="R" start="1530" end="1730" room="SW1-2009" enrolled="36"/>
+    <exam course="ACIT4660" day="R" start="800" end="1000" room="NE28-101" enrolled="36"/>
+    <exam course="ACIT4850" day="M" start="1530" end="1730" room="NE1-239/242" enrolled="37"/>
+    <exam course="ACIT4910" day="T" start="1530" end="1730" room="NE28-101" enrolled="35"/>
+  </block>
+  <block code="COMP1">
+    <exam course="BUSA2720" day="W" start="1030" end="1200" room="NE1-239/242" enrolled="63"/>
+    <exam course="COMM1116" day="T" start="1300" end="1500" room="NE1-239/242" enrolled="58"/>
+    <exam course="COMP1113" day="R" start="1530" end="1730" room="NE1-239/242" enrolled="68"/>
+    <exam course="COMP1510" day="M" start="1300" end="1500" room="NE1-239/242" enrolled="65"/>
+    <exam course="COMP1536" day="M" start="800" end="1000" room="NE1-239/242" enrolled="61"/>
+  </block>
+  <block code="COMP2">
+    <exam course="COMM2216" day="T" start="1530" end="1730" room="SW5-1840" enrolled="104"/>
+    <exam course="COMP2121" day="W" start="1530" end="1730" room="NE1-239/242" enrolled="101"/>
+    <exam course="COMP2510" day="R" start="800" end="1000" room="NE1-239/242" enrolled="99"/>
+    <exam course="COMP2526" day="M" start="1300" end="1500" room="SW5-1850" enrolled="105"/>
+    <exam course="COMP2714" day="W" start="800" end="1000" room="NE1-239/242" enrolled="100"/>
+    <exam course="COMP2721" day="T" start="800" end="1000" room="NE1-239/242" enrolled="95"/>
+  </block>
+  <block code="COMP3C">
+    <exam course="COMP3512" day="T" start="1300" end="1500" room="NE28-101" enrolled="15"/>
+    <exam course="COMP3711" day="M" start="800" end="1000" room="NE28-101" enrolled="12"/>
+    <exam course="COMP3721" day="W" start="1300" end="1500" room="NE1-239/242" enrolled="16"/>
+    <exam course="COMP3760" day="R" start="1030" end="1230" room="NE1-239/242" enrolled="10"/>
+    <exam course="COMP3920" day="T" start="800" end="1100" room="SE12-308" enrolled="11"/>
+    <exam course="COMP4925" day="M" start="1430" end="1730" room="SE12-308" enrolled="9"/>
+  </block>
+  <block code="COMP3D">
+    <exam course="COMP3512" day="T" start="1300" end="1500" room="NE28-101" enrolled="12"/>
+    <exam course="COMP3711" day="M" start="800" end="1000" room="NE28-101" enrolled="11"/>
+    <exam course="COMP3721" day="W" start="1300" end="1500" room="NE1-239/242" enrolled="18"/>
+    <exam course="COMP3760" day="R" start="1030" end="1230" room="NE1-239/242" enrolled="13"/>
+    <exam course="COMP3770" day="T" start="800" end="1000" room="NE28-101" enrolled="13"/>
+    <exam course="COMP3951" day="M" start="1430" end="1730" room="NE28-101" enrolled="17"/>
+  </block>
+  <block code="COMP3L">
+    <exam course="COMP3512" day="T" start="1300" end="1500" room="NE28-101" enrolled="14"/>
+    <exam course="COMP3711" day="M" start="800" end="1000" room="NE28-101" enrolled="12"/>
+    <exam course="COMP3721" day="W" start="1300" end="1500" room="NE1-239/242" enrolled="15"/>
+    <exam course="COMP3760" day="R" start="1030" end="1230" room="NE1-239/242" enrolled="11"/>
+    <exam course="COMP3770" day="T" start="800" end="1000" room="NE28-101" enrolled="17"/>
+    <exam course="COMP3951" day="M" start="1430" end="1730" room="NE28-101" enrolled="14"/>
+  </block>
+  <block code="COMP4A">
+    <exam course="BLAW3600" day="W" start="1530" end="1730" room="SW1-1205" enrolled="20"/>
+    <exam course="COMP4735" day="M" start="1030" end="1230" room="NE1-239/242" enrolled="20"/>
+    <exam course="COMP4870" day="T" start="1030" end="1230" room="NE1-239/242" enrolled="21"/>
+    <exam course="COMP4911" day="T" start="1530" end="1730" room="NE1-239/242" enrolled="21"/>
+    <exam course="COMP4915" day="M" start="1530" end="1730" room="NE1-239/242" enrolled="21"/>
+  </block>
+  <block code="COMP4B">
+    <exam course="BLAW3600" day="W" start="1530" end="1730" room="SW1-1205" enrolled="11"/>
+    <exam course="COMP4560" day="T" start="1530" end="1730" room="NE1-239/242" enrolled="16"/>
+    <exam course="COMP4711" day="R" start="1300" end="1500" room="NE1-239/242" enrolled="11"/>
+    <exam course="COMP4735" day="M" start="1030" end="1230" room="NE1-239/242" enrolled="20"/>
+    <exam course="COMP4932" day="T" start="1030" end="1230" room="SE12-308" enrolled="15"/>
+    <exam course="COMP4995" day="W" start="800" end="1000" room="SE12-308" enrolled="14"/>
+  </block>
+  <block code="COMP4G">
+    <exam course="BLAW3600" day="W" start="1530" end="1730" room="SW1-1205" enrolled="19"/>
+    <exam course="COMP4560" day="T" start="1530" end="1730" room="NE1-239/242" enrolled="23"/>
+    <exam course="COMP4711" day="R" start="1300" end="1500" room="NE1-239/242" enrolled="22"/>
+    <exam course="COMP4735" day="M" start="1030" end="1230" room="NE1-239/242" enrolled="21"/>
+    <exam course="COMP4941" day="T" start="800" end="1100" room="SE12-319" enrolled="21"/>
+    <exam course="COMP4945" day="W" start="800" end="1000" room="SE12-319" enrolled="21"/>
+  </block>
+  <block code="COMP4O">
+    <exam course="BLAW3600" day="W" start="1530" end="1730" room="SW1-1205" enrolled="17"/>
+    <exam course="COMP4560" day="T" start="1530" end="1730" room="NE1-239/242" enrolled="15"/>
+    <exam course="COMP4711" day="R" start="1300" end="1500" room="NE1-239/242" enrolled="16"/>
+    <exam course="COMP4735" day="M" start="1030" end="1230" room="NE1-239/242" enrolled="17"/>
+    <exam course="COMP4981" day="T" start="800" end="1000" room="SE12-323" enrolled="18"/>
+    <exam course="COMP4985" day="W" start="800" end="1000" room="SE12-323" enrolled="18"/>
+  </block>
+  <block code="COMP4Q">
+    <exam course="BLAW3600" day="W" start="1530" end="1730" room="SW1-1205" enrolled="17"/>
+    <exam course="COMP4560" day="T" start="1530" end="1730" room="NE1-239/242" enrolled="20"/>
+    <exam course="COMP4711" day="R" start="1300" end="1500" room="NE1-239/242" enrolled="19"/>
+    <exam course="COMP4735" day="M" start="1030" end="1230" room="NE1-239/242" enrolled="17"/>
+  </block>
+  <block code="COMP6D">
+    <exam course="BUSA6800" day="T" start="830" end="1030" room="NE1-412" enrolled="19"/>
+    <exam course="COMP8005" day="M" start="1230" end="1530" room="SE12-323" enrolled="16"/>
+    <exam course="COMP8006" day="R" start="1330" end="1630" room="SE12-323" enrolled="17"/>
+    <exam course="COMP8081" day="R" start="930" end="1230" room="NE1-353" enrolled="20"/>
+    <exam course="LIBS7002" day="T" start="1430" end="1730" room="NE1-422" enrolled="20"/>
+  </block>
+  <block code="COMP6H">
+    <exam course="BUSA6800" day="T" start="830" end="1030" room="NE1-412" enrolled="21"/>
+    <exam course="COMP8051" day="W" start="1030" end="1330" room="SE12-303" enrolled="21"/>
+    <exam course="COMP8081" day="R" start="1330" end="1630" room="SE12-303" enrolled="20"/>
+    <exam course="COMP8903" day="R" start="930" end="1230" room="SE12-303" enrolled="20"/>
+    <exam course="LIBS7002" day="M" start="1430" end="1730" room="SE12-303" enrolled="20"/>
+  </block>
+  <block code="COMP8D">
+    <exam course="COMP7481" day="R" start="930" end="1230" room="SE12-318" enrolled="17"/>
+    <exam course="LIBS7014" day="R" start="1430" end="1730" room="NE1-294" enrolled="16"/>
+  </block>
+  <block code="COMP8H">
+    <exam course="COMP7911" day="T" start="830" end="1130" room="SE12-303" enrolled="14"/>
+    <exam course="COMP8902" day="T" start="1130" end="1430" room="SE12-303" enrolled="16"/>
+    <exam course="LIBS7014" day="R" start="830" end="1130" room="NE1-320" enrolled="16"/>
+  </block>
+</exams>
